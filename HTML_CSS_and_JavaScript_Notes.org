@@ -1,0 +1,237 @@
+* HTML CSS Javasrcipt notes
+** Overview
+What the courses are about?
+1. HTML CSS and Javascript
+2. JQuery + Bootstrap + AngularJS
+3. AngularJS
+4. Mobile APP development with web technologies
+5. NodeJS
+6. Web - Mobile support
+** week 1 -- HTML
+*** General points
+Basic functionalities:
+- html -> visual level
+- css -> setting display rule
+- Javascript -> change the html and css
+Other concepts:
+- Single Page Application (SPA) -> not change the page but only modify part of content
+- SVG: an alternative for html but ordinarily used for graphics
+- TinyMCE: an editor for website design
+- <title> should be in the head part
+- all visual element must go inside the <body>
+- html file start with <!doctype html>
+*** The Basics of HTML
+Common HTML elements
+- Headings: <h1> <h2> ... <h6>
+- Section: <section>
+- Lists: ol(ordered list), ul(unordered list), li(list items)
+- Comments: <!-- comments -->
+Formatting text
+- Italic text: <i> <em>
+- Bold text: <b> <strong>
+- Underline: <u>
+- Size: <big> <small>
+- Hightlight: <mark>
+- Subscript and Superscript: <sub>, <sup>
+- Inserted text: <ins>
+- Deleted text: <del>
+*** Multimedia
+- Images: <img src= "path to image" options> options: width, height
+- Audio: <audio src = "" options></audio> options: autoplay, controls, loop, height, width
+- Video: <video src= "" options></video> options same with Audio and one more: alt = "" add the alternative text in case video cannot display and users can search from the Internet
+*** Strengthening Your Knowledge of HTML
+- Links: <a href ="" > text or <img src=""></a>
+- line to position: <a name = "#where" > go there </a> 
+- LOREM IPSUM TEXT: random text to padding : www.lipcum.com
+- Void elements: break <br> <meta > <img> <input> <hr> <wbr>
+Breaks: 
+- <br> normal next line 
+- <wbr> (optional break) in the middle of the word
+- <hr> add a horizonal line
+Style
+- CSS: Cascading style sheets
+- Information + style = Visual Output
+- Examples: h1 { color : purple}
+- Other options: background, font-family, font-size, text-align
+- Put the style in the <head>
+- Use a unique id #theElementID {color: red}
+- Class: start with a "." like .lol {color:red}
+- Class examples: <h1 class = "lol" > ...
+- Inline style: <p style = "color: red"> ...
+- Pseudo class: h1: hover {color: red} when moving mouse through the h1, it will
+  turn red
+- options: link, visited, active, empty
+Tables
+- <table> <thead> <th> table header
+- <tbody> table body
+- <td> table data
+- <tr> row
+- properties: style, border, padding
+Div and span
+- no default style and meaning
+- div usually to postition an element
+- div: relative position, absolut position
+- span usually to add a inline style
+- div but not new line: "display : inline-block"
+*** Handling Forms
+- <form action = "destination" method= "get or post">  <input type =
+  "submit"> </form>
+- post method commonly is used to keep secrets
+- Add a text area for input <textarea row = "3" col = "6" name = "" id
+  = ""> and the name is passed to the server
+- input types: text, checkbox, radio, password, file, submit
+- html5 new input types: number, date, color, time, email, tel, range
+- <label for ="name">
+- options for input: autofocus, required, *placeholder*(default value
+  but will dispear when users type in, while using the value will not dispear)
+- file upload: <input type = "submit" >
+*** Grouping
+- <fieldset> adding a visual box
+- <lengend> add the title for the field
+- 
+** week 2 -- JavaScript
+*** Introduction to JavaScript
+General points
+- Dominant web programming, StackOverFlow
+- JavaScript can change both HTML and CSS
+- JQuery is a library build upon JS
+- Bootstrap is a framework built upon JS
+- JS code usually is put at the end of the body section in the html
+- Loaded JS libraries are in the <head> section
+- JS in the same file: <script> fucntion {...} </..>
+- JS in another file: <script src = ""> in the html functon {...}
+3 simple functions
+- alert() pops up a small window
+- confirm() popup box with OK and Cancel
+*** Basics of JavaScript
+**** Variables
+- variables like var totalCost = 7000
+- prompt() provide the text box for typing some words
+- JS code should ends with a ";"
+- variables: var, typeof
+- Data types: Number, String, Boolean, Object
+- Boolean: true, false
+- String: "''"
+- You can assign different type of value to one variable, like var a = 123; a = "abc"
+- Comment by // and /* comments */
+- Common changes: ++ -- += -= *= /=
+- Type change: parseInt(), parseFloat(), String()
+**** Introduction to Events and Functions
+- Events like click on something, move the mouse, press the key
+- Onload: onload is triggered when the object has loaded
+- Functions: define in the <script>, more efficient than simplely add command in the line
+- You can pass the value in the functions and return a value
+- Recursive function: a function call itself
+**** Handling Bugs
+- Use the chrome - developer tools - console
+- Console can excute the javascript function immediately
+- Use console.log to only allow the developer see the informtion pop up (Useful for developing)
+- If, else if, else, switch, case, break. All are similar with C++
+- while loop: while, do ... while
+- string.indexof(): give the location of search text
+- Logical comparison
+- 
+Array
+- Join: pets.join("")
+- Change value: just assin the value
+- Length: pets.length
+- Add the value in the end of the array: push()
+- Add the value in the front of the array: unshift()
+- Delete from the back: pop()
+- Delete from the top: shirt()
+- Combine two arrays: concat() like: pets.concat()
+Generate the random number
+- Math.random() and its range is [0:1)
+- Set the range: Math.random() * max_value
+- Throw away the decimal place: Math.floor(), only get the Integer result
+
+** week 3 -- Advanced JavaScript
+*** For Loop
+- For(var index; index < array.length; index++)
+- For in: for(var index in array) array[index]
+- For in objects: for(var property in onePerson) property + "=" + onePerson[property]
+- For of: for(var con in cons) con is the single element
+- Others: array.length, array.push(), LIST = []
+Loop control
+- break: stop the loop
+- continue: skip one loop a time
+*** More about array
+1. Sorting: array.sort(): if sorting the 
+2. reverse: array.reverse()
+3. sort() + reverse(): sort in decline order
+4. indexof:  array.indexOf(target): return the position of target
+5. indexOf(target, startPosition)
+6. lastIndexOf(target): search backwards.
+7. slice(): extract part of the array. Such as, slice(1), slice(1, 3)
+8. splice: add elements anywhere to an array: array.splice(position, quantity, elements) 
+*** Array functions
+- forEach(): array.forEach(alert)
+- use a function in it: array.forEach(function(elem, idx, arr){ })
+- map(): apply a function to an array
+*** DOM: Document Obeject Model
+Basic concepts
+- Conceptes: Tree structures, nodes, root, child nodes, branch
+- nodes have properties
+- Whitespace nodes: spacing,
+- Text node has whitenspace
+Node relations
+- Relations: firstchild/ childNodes[0], lastChild, sibibings, parentNode
+- Path: document.childNodes[0]
+- nodeName, event.stopPropagation
+- Event handlers are added to everyelement
+Locating Nodes
+- Everything is in the DOM
+- Method 1: use the exact DOM path: document.childNodes[0]
+- Method 2: use the type: getElementByTagName()
+- Method 3: use the name: getElementById()
+- getElementById("id").setAttribute("style", "color:red")
+Creating and adding nodes
+- createElement(): document.createElement("div"), createTextNode()
+- insertBefore(): insertBefore(newItem destParent.firstChild)
+- appendChild():
+Deleting nodes:
+- removeChild(this_node)
+- the_node.parentNode.removeChild(the_node)
+- Methods:getParent and remove the child
+- Delete all children: while there has a child, remove the first child
+Cloning Nodes
+- node.cloneNode(false or true to choose whether to add the node)
+- node.cloneNode(true) copy the branch
+*** More on Events
+Mouse Events
+- onclick
+- onmousedown: press down the button
+- onmouseup: left the button after pressing
+- window.location.href = where(ULRs)
+- onmouseover: like the hover
+- onmouseout
+Timer Events
+- Doing sth. later
+- setTimeout(do_something, 1000) execute after 1000ms
+- stop timer: clearTimeout(the_timer)
+- setInterval(do_something, 2000)
+- clearInterval()
+Adding Events using JS
+- Add an event to an element
+- window.onload, window.addEventListener("load", do_something)
+- Event handlers are stored in an array
+- removeEventListener("click", do_something)
+*** More about the functions
+- Ways to define the function
+- function functionOne(){}
+- var functionTwo = function() {}
+- var functionTwo = function thisFunc(){}
+- Pass a function to a function (fn, num, div)
+- return the function from a function: return fucntion(){} and invoke by count()
+- 
+*** Project
+- 5 five faces a time at random positions
+- if click the wrong one: alert "game over"
+- if correct face is clicked, all faced deleted and 5 more will be added
+- a style rule in the middle
+- cloneNode(true) on the right from the left
+- delete the last child
+- one single HTML
+- 4 parts in the assessemtnt
+- 
+- 

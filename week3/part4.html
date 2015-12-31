@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title> Example of prompt()</title>
+  <style>
+  div {
+    width:500px;
+    height:500px;
+    position:absolute;
+  }
+  img{
+    position:absolute;
+  }
+  #rightSide { left: 500px;
+              border-left: 1px solid black }
+
+  </style>
+
+  <script>
+  var  numberOfFaces = 5;
+
+  function generateFaces(){
+    var theLeftSide = document.getElementById("leftSide");
+    var theRightSide = document.getElementById("rightSide");
+    var theBody = document.getElementById("body");
+
+      for(var index = 0; index < numberOfFaces; index++ ){
+        var top = Math.floor(Math.random() * 401);
+
+        var left = Math.floor(Math.random() * 401);
+
+        var theImg = document.createElement("img");
+        theImg.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+
+        theImg.style.top = top + "px";
+        theImg.style.left = left + "px";
+        theLeftSide.appendChild(theImg);
+      }
+      leftSideImages = theLeftSide.cloneNode(true);
+      leftSideImages.removeChild(leftSideImages.lastChild);
+      theRightSide.appendChild(leftSideImages);
+
+      
+      theLeftSide.lastChild.onclick = function nextLevel(event)
+      {
+          event.stopPropagation();
+          numberOfFaces += 5;
+          while (theLeftSide.firstChild)
+          {
+              theLeftSide.removeChild(theLeftSide.firstChild);
+          }
+          while (theRightSide.firstChild)
+          {
+              theRightSide.removeChild(theRightSide.firstChild);
+          }
+          generateFaces();
+      };
+      theBody.onclick = function gameOver()
+      {
+          alert("Game Over!\n\n");
+          theBody.onclick = null;
+          theLeftSide.lastChild.onclick = null;
+      };
+  }
+
+  </script>
+</head>
+
+<body id = "body" onload = generateFaces()>
+  <h1> Matching Game</h1>
+    <p>
+         Click on the extra smiling face on the left.
+    </p>
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+</body>
+
+</html>

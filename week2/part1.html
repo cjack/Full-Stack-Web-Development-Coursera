@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title> JavaScript Assignment</title>
+  <script>
+
+      var target;
+      var guess_input;
+      var finished = false;
+      var guesses = 0;
+      var colors = ["blue", "cyan", "gold", "green", "magenta",
+      "orange", "red", "white", "yellow"]
+
+      function do_game(){
+        // randomly choose a number and index the color
+        var target_index = Math.floor(Math.random() * (colors.length));
+        target = colors[target_index];
+
+        //only for debug
+        alert("For debugging and marking purpose, the answer is:\n\n" + target)
+
+        while(!finished){
+          guess_input = prompt("I am thinking of one of these colors:\n\n"+
+                                     colors + "\n\nWhat color am I thinking of?");
+          guesses += 1;
+          if(guess_input == target){
+            finished = true;
+          }else{
+            finished = false;
+          }
+        }
+        document.body.style.backgroundColor = target;
+      }
+
+  </script>
+</head>
+
+<body onload = "do_game()">
+
+</body>
+
+</html>
