@@ -222,8 +222,7 @@ Adding Events using JS
 - var functionTwo = function() {}
 - var functionTwo = function thisFunc(){}
 - Pass a function to a function (fn, num, div)
-- return the function from a function: return fucntion(){} and invoke by count()
-- 
+- return the function from a function: return fucntion(){} and invoke by count() 
 *** Project
 - 5 five faces a time at random positions
 - if click the wrong one: alert "game over"
@@ -232,6 +231,5 @@ Adding Events using JS
 - cloneNode(true) on the right from the left
 - delete the last child
 - one single HTML
-- 4 parts in the assessemtnt
-- 
-- 
+- 4 parts in the assessment 
+
