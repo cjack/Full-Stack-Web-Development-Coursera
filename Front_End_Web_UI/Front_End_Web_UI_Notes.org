@@ -1,0 +1,8 @@
+* Week 1: Front-end Web UI Frameworks Overview: Bootstrap
+** Full Stack Web Development: The Big Picture
+** Introduction to Bootstrap
+** Responsive Design and Bootstrap Grid System
+** Navigation and Navigation Bar
+* Week 2: Bootstrap CSS Components
+* Week 3: Bootstrap Javascript Components
+* Week 4: Web Tools
